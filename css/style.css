@@ -134,4 +134,36 @@ nav a{margin:0 8px;text-decoration:none;color:var(--muted)}
     overflow: hidden;
   }
 }
+/* === Position hamburger button on the left corner === */
+
+/* Ensure the nav row uses full width and aligns correctly */
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Place the hamburger button at the far left */
+.nav-toggle {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Add left padding so other items (brand / controls) don’t overlap it */
+.container.nav-row {
+  padding-left: 60px; /* adjust if needed */
+}
+
+/* Make sure the hamburger stays visible on mobile */
+@media (max-width:900px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 
