@@ -88,12 +88,10 @@
 <body>
   <header class="site-header">
   <div class="container nav-row">
-
-    <!-- LEFT: Menu -->
+    <!-- LEFT: Hamburger -->
     <div class="nav-left">
       <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
         <span class="hamburger"></span>
-        
       </button>
     </div>
 
@@ -102,15 +100,21 @@
       <a href="index.html" class="brand">Nakshatra R.</a>
     </div>
 
-    <!-- RIGHT: Controls -->
+    <!-- RIGHT: Theme + Resume -->
     <div class="nav-right">
       <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
-      <a href="resume.pdf" class="resume-btn" target="_blank">Download Resume</a>
+      <a href="resume.pdf" class="resume-btn" target="_blank" rel="noopener noreferrer">Download Resume</a>
     </div>
-
   </div>
-</header>
 
+  <!-- SLIDE-IN MENU -->
+  <nav id="mainNav" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
   <h1>My Achievements & Certifications</h1>
 
@@ -198,6 +202,7 @@
 
 </body>
 </html>
+
 
 
 
