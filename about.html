@@ -10,15 +10,25 @@
   <header class="site-header">
     <div class="container nav-row">
       <a class="brand" href="index.html">Nakshatra R.</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="achievements.html">Achievements</a>
+      <header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Nakshatra R</a>
 
-      </nav>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="mainNav" class="main-nav" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
       <div class="controls">
         <button id="theme-toggle-2" aria-label="Toggle dark mode">🌙</button>
         <a class="resume-btn" href="assets/resume.pdf" download>Download Resume</a>
