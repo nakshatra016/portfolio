@@ -65,6 +65,19 @@
       margin: 0;
       color: #007bff;
     }
+    .mini-gallery {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+}
+
+.mini-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
     .card-content p {
       color: #555;
       font-size: 14px;
@@ -112,18 +125,63 @@
       </div>
     </div>
     <div class="card">
-      <img src="assets/tedxtalk101.jpg" alt="Event 2" />
-      <img src="assets/tedxtalk1.jpg" alt="Event 2" />
-      <img src="assets/tedxtalk2.jpg" alt="Event 2" />
-      <div class="card-content">
-        <h3>TEDx TALK 101 2025</h3>
-        <p>A hands-on workshop where participants mastered the art of storytelling,public speaking and crafting a TEDx worthy speech</p>
-      </div>
-    </div>
-
-
-    
+  <div class="mini-gallery">
+    <img src="assets/tedxtalk101.jpg" alt="TEDx TALK 101" />
+    <img src="assets/tedxtalk1.jpg" alt="TEDx TALK 101" />
+    <img src="assets/tedxtalk2.jpg" alt="TEDx TALK 101" />
+  </div>
+  <div class="card-content">
+    <h3>TEDx TALK 101 2025</h3>
+    <p>A hands-on workshop where participants mastered the art of storytelling, public speaking, and crafting a TEDx-worthy speech.</p>
+  </div>
+</div>
   </section>
+  <script>
+  // Create a popup overlay dynamically
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.background = 'rgba(0,0,0,0.9)';
+  overlay.style.display = 'flex';
+  overlay.style.justifyContent = 'center';
+  overlay.style.alignItems = 'center';
+  overlay.style.visibility = 'hidden';
+  overlay.style.opacity = 0;
+  overlay.style.transition = 'opacity 0.3s ease';
+  overlay.style.zIndex = '1000';
+
+  const popupImg = document.createElement('img');
+  popupImg.style.maxWidth = '90%';
+  popupImg.style.maxHeight = '90%';
+  popupImg.style.borderRadius = '10px';
+  popupImg.style.boxShadow = '0 0 20px rgba(255,255,255,0.2)';
+  overlay.appendChild(popupImg);
+  document.body.appendChild(overlay);
+
+  // Show popup on click
+  document.querySelectorAll('.card img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      popupImg.src = img.src;
+      overlay.style.visibility = 'visible';
+      overlay.style.opacity = 1;
+    });
+  });
+
+  // Close popup when clicking outside the image
+  overlay.addEventListener('click', e => {
+    if (e.target !== popupImg) {
+      overlay.style.opacity = 0;
+      setTimeout(() => {
+        overlay.style.visibility = 'hidden';
+      }, 300);
+    }
+  });
+</script>
+
 
 </body>
 </html>
