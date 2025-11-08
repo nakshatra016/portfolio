@@ -165,5 +165,24 @@ nav a{margin:0 8px;text-decoration:none;color:var(--muted)}
     justify-content: center;
   }
 }
+/* --- "Menu" text next to hamburger --- */
+.menu-text {
+  margin-left: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+/* Keep button on the left corner */
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 4px;
+}
 
 
